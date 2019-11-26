@@ -22,7 +22,8 @@ github.com/luanphandinh/reprox/examples/server1
 ```
 
 * Proxy server start in port 8080
-    * /1 will forward request to Server 1
-    * /2 will forward request to Server 2
+    * /server1 will forward request to `localhost:3000/`
+    * /server2 will forward request to `localhost:3001/`
+    * /server2/info will forward request to `localhost:3001/info` 
 * Server 1 start in port 3000
 * Server 2 start in port 3001
