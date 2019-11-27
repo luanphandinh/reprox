@@ -8,8 +8,9 @@ import (
 
 func main() {
 	gateway := reprox.NewReprox()
-	gateway.Register("server1", "http://localhost:3000/")
-	gateway.Register("server2", "http://localhost:3001/")
+	gateway.
+		Register("server1", "http://localhost:3000/").
+		Register("server2", "http://localhost:3001/")
 
 	log.Println("Reverse Proxy server start in port 8080")
 

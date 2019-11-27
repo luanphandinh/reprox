@@ -17,13 +17,15 @@ func NewReprox() *Reprox {
 	}
 }
 
-func (r *Reprox) Register(name string, path string) {
+func (r *Reprox) Register(name string, path string) *Reprox {
 	remote, err := url.Parse(path)
 	if err != nil {
 		panic(err)
 	}
 
 	r.proxies[name] = httputil.NewSingleHostReverseProxy(remote)
+
+	return r
 }
 
 func (rp *Reprox) Handle() func(http.ResponseWriter, *http.Request) {
